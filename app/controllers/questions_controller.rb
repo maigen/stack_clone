@@ -3,12 +3,15 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
+  def new
+    @question = Question.new
+  end
+
   def create
-    @question = Question.new(question_params)
-    if @question.save
-      redirect_to root_path, notice: "Question Saved!"
-    else
-      render root_path, notice: "Please check your entry and try again."
+    @question = Question.create!(question_params)
+    respond_to do |format|
+      format.html { redirect_to questions_path }
+      format.js
     end
   end
 
