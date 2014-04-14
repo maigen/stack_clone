@@ -1,1 +1,13 @@
-hey. this is a page.
+<h1>All Questions</h1>
+
+<ul>
+  <% @questions.each do |question| %>
+    <div class="question_list">
+      <li>
+        <%= question.content %><br/>
+        Posted by: <%= question.user.name %> at <%= question.created_at.strftime("%I:%M %P on %B %d") %>
+     </li>
+    </div>
+    <% end %>
+</ul>
+
