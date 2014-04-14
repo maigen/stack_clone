@@ -1,0 +1,6 @@
+<%= form_for [@question, @answer], remote: true do |f| %>
+  <%= f.text_field :content %>
+  <%= f.hidden_field :user_id, :value => "#{current_user.id}" %>
+  <%= f.hidden_field :question_id, :value => "#{@question.id}" %>
+  <%= f.submit "Post Answer" %>
+<% end %>
