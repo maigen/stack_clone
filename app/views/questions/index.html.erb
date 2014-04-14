@@ -1,13 +1,5 @@
 <%= content_for(:navigation) do %>
-  <% if current_user %>
-    <p>Logged in as <%= current_user.name %>.</p>
-    <p><%= link_to "Logout", destroy_user_session_path %></p>
-    <p><%= link_to "Main Page", root_path %></p>
-  <% else %>
-  <p><%= link_to "Login", new_user_session_path %></p>
-  <p><%= link_to "Sign-up", new_user_registration_path %></p>
-  <p><%= link_to "Main Page", root_path %></p>
-  <% end %>
+
 <% end %>
 
 <% content_for(:header) do %>
