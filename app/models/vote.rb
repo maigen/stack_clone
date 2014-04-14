@@ -2,4 +2,6 @@ class Vote < ActiveRecord::Base
   belongs_to :answer
   belongs_to :user
   validates :value, presence: true
+
+
 end

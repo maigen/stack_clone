@@ -3,13 +3,13 @@
 <% end %>
 
 <%= content_for (:header) do %>
-  <h1>Question!</h1>
-<% end %>
-
 <div class="question_header">
   <%= @question.content %><br/>
   Posted by: <%= @question.user.name %> at <%= @question.created_at.strftime("%I:%M %P on %B %d") %>
 </div>
+<% end %>
+
+
 
 <ul>
 <div id="answer_list">

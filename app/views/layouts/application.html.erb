@@ -5,12 +5,13 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
 </head>
 <body>
  <div class="container">
     <div class="row">
 
-      <div class= "col-sm-3 navigation">
+      <div class= "col-md-3 navigation">
         <% if current_user %>
           <p>Logged in as <%= current_user.name %>.</p>
           <p><%= link_to "Logout", destroy_user_session_path %></p>
@@ -21,14 +22,19 @@
         <%= yield(:navigation) %>
       </div>
 
-      <div class= "col-sm-9">
+      <div class= "col-md-9">
 
         <div class="row">
-          <%= yield(:header) %>
-
-          <%= flash[:notice] %>
-          <%= flash[:alert] %>
-          <%= yield %>
+          <div class="header">
+            <%= yield(:header) %>
+          </div>
+          <div class="notices">
+            <%= flash[:notice] %>
+            <%= flash[:alert] %>
+          </div>
+          <div class="content">
+            <%= yield %>
+          </div>
         </div>
       </div>
 
