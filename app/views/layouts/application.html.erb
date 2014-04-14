@@ -7,10 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-    <%= flash[:notice] %>
-    <%= flash[:alert] %>
-    <%= yield %>
+ <div class="container">
+    <div class="row">
+
+      <div class= "col-sm-3 navigation">
+        <%= yield(:navigation) %>
+      </div>
+
+      <div class= "col-sm-9">
+
+        <div class="row">
+          <%= yield(:header) %>
+
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+          <%= yield %>
+        </div>
+      </div>
+
+    </div>
   </div>
 </body>
 </html>
