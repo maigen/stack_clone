@@ -1,0 +1,22 @@
+
+<div class="question_header">
+  <%= @question.content %><br/>
+  Posted by: <%= @question.user.name %> at <%= @question.created_at.strftime("%I:%M %P on %B %d") %>
+</div>
+
+
+<div class="answer_list"
+  <ul>
+    <% @question.answers.each do |answer| %>
+      <div class="answer">
+        <li>
+          <%= answer.content %><br/>
+          Posted by: <%= answer.user.name %> at <%= answer.created_at.strftime("%I:%M %P on %B %d") %><br/>
+        </li>
+      </div>
+      <% end %>
+  </ul>
+</div>
+
+<p><%= link_to "New Answer", new_question_answer_path(@question), id: "answer_link", remote: true %></p>
+
