@@ -1,5 +1,5 @@
 <li>
-  <%= question.content %><br/>
+  <span class="question_content"><%= question.content %></span><br/>
   Posted by: <%= question.user.name %> at <%= question.created_at.strftime("%I:%M %P on %B %d") %><br/>
   <%= link_to "Answers", question_path(question.id) %>
 </li>

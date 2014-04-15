@@ -3,10 +3,8 @@
 <% end %>
 
 <%= content_for (:header) do %>
-<div class="question_header">
   <%= @question.content %><br/>
-  Posted by: <%= @question.user.name %> at <%= @question.created_at.strftime("%I:%M %P on %B %d") %>
-</div>
+  <span class="posted_by">Posted by: <%= @question.user.name %> at <%= @question.created_at.strftime("%I:%M %P on %B %d") %></span>
 <% end %>
 
 
@@ -17,5 +15,5 @@
 </div>
 </ul>
 
-<p><%= link_to "New Answer", new_question_answer_path(@question), id: "answer_link", remote: true %></p>
+<p class="new_answer"><%= link_to "New Answer", new_question_answer_path(@question), id: "answer_link", remote: true %></p>
 

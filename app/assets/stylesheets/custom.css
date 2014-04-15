@@ -6,20 +6,29 @@
 }
 
 .header {
+  float: right;
+  width: 30%;
   font-family: 'Megrim', cursive;
-  font-size: 30px;
+  font-size: 30px !important;
   font-weight: 400;
   border: 1px solid black;
   border-radius: 5px;
   margin: 10px;
   background-color: #EFEFF7;
+  padding: 30px;
 }
 
 .container {
-  max-width: 700px;
   border: 1px solid black;
   border-radius: 5px;
   background: url(stardust.png);
+  padding: 30px;
+  margin: 30px
+}
+
+.body_col {
+  float: right !important;
+  margin-right: 50px;
 }
 
 a {
@@ -29,24 +38,60 @@ a {
 }
 
 body {
-  background: url(grey_wash_wall.png);
+  background: url(wavegrid.png);
   background-color: #A2B7BB;
 }
 
 li {
+  float: right;
+  width: 75%;
   background-color: #EFEFF7;
   list-style-type: none;
   border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.posted_by {
+  float: right;
+  font-size: 15px;
+  color: grey;
+}
+
+.vote_text {
+  color: grey;
 }
 
 .votes {
   font-weight: 400;
+  color: grey;
+}
+
+#answer_link {
+  font-size: 25px;
+}
+
+#question_link {
+  font-size: 25px;
+}
+
+.question_content {
+  font-size: 25px;
+
 }
 
 .answer {
+  width: 75%;
   font-size: 15px;
   border-radius: 5px;
   background-color: #EFEFF7;
   padding-left: 15px;
   margin: 5px;
+  float: right;
+}
+
+.notices {
+  color: white;
+  font-family: 'Megrim', cursive;
+  font-size: 30px;
 }
