@@ -103,3 +103,7 @@ li {
 .form-group1 {
   color: black;
 }
+
+.form-group input {
+  color: #012223;
+}
