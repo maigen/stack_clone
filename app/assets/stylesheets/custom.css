@@ -7,7 +7,7 @@
 
 .header {
   float: right;
-  width: 30%;
+  max-width: 71%;
   font-family: 'Megrim', cursive;
   font-size: 30px !important;
   font-weight: 400;
@@ -94,4 +94,12 @@ li {
   color: white;
   font-family: 'Megrim', cursive;
   font-size: 30px;
+}
+
+.form-group {
+  color: #DAE2E2;
+}
+
+.form-group1 {
+  color: black;
 }

@@ -12,12 +12,12 @@
     <div class="row">
 
       <div class= "col-md-3 navigation">
-        <% if current_user %>
-          <p>Logged in as <%= current_user.name %>.</p>
-          <p><%= link_to "Logout", destroy_user_session_path %></p>
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.name %></strong>.
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
         <% else %>
-          <p><%= link_to "Login", new_user_session_path %></p>
-          <p><%= link_to "Sign-up", new_user_registration_path %></p>
+          <%= link_to "Log In", new_user_session_path %> |
+          <%= link_to "Sign Up", new_user_registration_path %>
         <% end %>
         <%= yield(:navigation) %>
       </div>
@@ -25,7 +25,7 @@
       <div class= "col-md-9 body_col">
 
         <div class="row">
-          <div class="header">
+
             <%= yield(:header) %>
           </div>
           <div class="notices">
