@@ -10,10 +10,12 @@
 
 
 <ul>
-<div id="answer_list">
-  <%= render( @question.answers ) %>
-</div>
+  <div id="answer_list">
+    <%= render( @question.answers ) %>
+  </div>
 </ul>
-
-<p class="new_answer"><%= link_to "New Answer", new_question_answer_path(@question), id: "answer_link", remote: true %></p>
-
+<% if user_signed_in? %>
+  <p class="new_answer"><%= link_to "New Answer", new_question_answer_path(@question), id: "answer_link", remote: true %></p>
+<% else %>
+  <p class="new_answer"><%= link_to "New Answer", new_question_answer_path(@question), id: "answer_link" %></p>
+<% end %>

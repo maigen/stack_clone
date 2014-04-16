@@ -12,6 +12,10 @@
   </div>
 </ul>
 
-<p><%= link_to "New Question", new_question_path, id: "question_link", remote: true %></p>
 
+<% if user_signed_in? %>
+  <p class="new_question"><%= link_to "New Question", new_question_path, id: "question_link", remote: true %></p>
+<% else %>
+  <p class="new_question"><%= link_to "New Question", new_question_path, id: "question_link" %></p>
+<% end %>
 
